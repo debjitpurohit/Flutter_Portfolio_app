@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class MyAbout extends StatefulWidget {
   const MyAbout({Key? key}) : super(key: key);
@@ -9,6 +10,7 @@ class MyAbout extends StatefulWidget {
 }
 
 class _MyAboutState extends State<MyAbout> {
+  var mobileNo='+918670824999';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -82,22 +84,30 @@ class _MyAboutState extends State<MyAbout> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                    IconButton(onPressed: (){}, icon: Icon(
+                    IconButton(onPressed: (){
+                      launch('https://www.instagram.com/_d.e.b.j.i.t_8125/');
+                    }, icon: Icon(
                       FontAwesomeIcons.instagram,color: Colors.white,
                     )),
-                    IconButton(onPressed: (){}, icon: Icon(
+                    IconButton(onPressed: (){
+                      launch('https://www.facebook.com/profile.php?id=100074103424096/');
+                    }, icon: Icon(
                       FontAwesomeIcons.facebook,color: Colors.white,
                     )),
-                    IconButton(onPressed: (){}, icon: Icon(
+                    IconButton(onPressed: (){
+                      launch('https://www.linkedin.com/in/debjit-purohit-701b78220/');
+                    }, icon: Icon(
                       FontAwesomeIcons.linkedin,color: Colors.white,
                     )),
-                    IconButton(onPressed: (){}, icon: Icon(
+                    IconButton(onPressed: (){
+                      launch('https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSHwCfskHpSfpvLbCMvDpjKWJPwgsjzxjngRgtFTkKXfCxRzKxHVnDqZhxRPmxGJLhrsZBzg');
+                    }, icon: Icon(
                       FontAwesomeIcons.envelope,color: Colors.white,
                     )),
-                    IconButton(onPressed: (){}, icon: Icon(
-                      FontAwesomeIcons.whatsapp,color: Colors.white,
-                    )),
-                      IconButton(onPressed: (){}, icon: Icon(
+
+                      IconButton(onPressed: (){
+                        launch('https://github.com/debjitpurohit');
+                      }, icon: Icon(
                         FontAwesomeIcons.github,color: Colors.white,
                       )),
                   ],)

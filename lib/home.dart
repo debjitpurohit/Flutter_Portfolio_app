@@ -69,6 +69,32 @@ class _MyHomeState extends State<MyHome> {
       backgroundColor: Colors.black,
       extendBodyBehindAppBar: true,
       appBar: AppBar(
+        leading: PopupMenuButton(
+          icon: Icon(Icons.menu),
+         color: Colors.black,
+          itemBuilder: (context)=>[
+            PopupMenuItem(
+              height: 20,
+                child: TextButton(
+              child: Text('Projects',style: TextStyle(
+                  color: Colors.white)),
+              onPressed: (){
+                Navigator.pushNamed(context, 'project');
+              },
+            ),
+            value: 1
+              ,),
+            PopupMenuItem(
+                child: TextButton(
+                  child: Text('About Me',style: TextStyle(
+                      color: Colors.white)),
+                  onPressed: (){
+                    Navigator.pushNamed(context, 'about');
+                  },
+                ),
+            value: 2,)
+          ],
+        ),
         elevation: 0,
         backgroundColor: Colors.transparent,
       ),
@@ -154,7 +180,7 @@ class _MyHomeState extends State<MyHome> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    myAchiv('31', ' Projects'),
+                    myAchiv('12', ' Projects'),
                     myAchiv('25', ' Skills'),
                     myAchiv('10', ' Experiences'), 
                   ],
